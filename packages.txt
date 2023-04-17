@@ -65,6 +65,7 @@ zathura
 gparted
 mpv
 yt-dlp
+go
 ff2mpv-go-git
 sxiv
 polkit-gnome

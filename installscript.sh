@@ -1,12 +1,17 @@
 #!/bin/bash
 
-pacman -S --noconfirm --needed base-devel 
+sudo pacman -S --noconfirm  --needed base-devel 
 
-git clone https://aur.archlinux.org/yay.git
-# chown -R  cloudcone:users yay
-cd yay 
+# git clone https://aur.archlinux.org/yay.git
+# # chown -R  cloudcone:users yay
+# cd yay 
+# makepkg -si
+# yay -S --noconfirm paru
+
+git clone https://aur.archlinux.org/paru.git
+cd paru
 makepkg -si
-yay -S --noconfirm paru
+
 paru --noconfirm --needed -S - < ./packages.txt
 
 echo "[user]
