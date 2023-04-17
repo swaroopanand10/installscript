@@ -3,9 +3,9 @@
 pacman -S --noconfirm --needed base-devel 
 
 git clone https://aur.archlinux.org/yay.git
-chown -R  cloudcone:users yay
-cd yay; makepkg -si
-
+# chown -R  cloudcone:users yay
+cd yay 
+makepkg -si
 yay -S --noconfirm paru
 paru --noconfirm --needed -S - < ./packages.txt
 
