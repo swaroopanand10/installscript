@@ -1,6 +1,7 @@
 #!/bin/bash
 
-sudo pacman -S --noconfirm  --needed base-devel 
+sudo pacman -S --noconfirm  --needed base-devel rustup
+rustup default stable
 
 # git clone https://aur.archlinux.org/yay.git
 # # chown -R  cloudcone:users yay
@@ -12,7 +13,7 @@ git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 
-paru --noconfirm --needed -S - < ./packages.txt
+./packages.sh
 
 echo "[user]
 	name = swaroopanand
@@ -23,7 +24,6 @@ echo "[user]
 	ui = auto
 [core]
 	excludeFile = ~/.gitignore">.gitconfig
-
 
 # setting up git bare repo
 git clone --bare git@github.com:swaroopanand10/.cfg.git $HOME/.cfg
