@@ -15,3 +15,7 @@ vscode-html-languageserver \
 tidy \
 stylelint \
 js-beautify \
+vscode-json-languageserver \
+bash-language-server \
+lua-language-server \
+shfmt \
