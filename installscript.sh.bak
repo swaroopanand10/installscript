@@ -1,0 +1,56 @@
+#!/bin/bash
+
+## before this do su swaroop, and then sudo pacman -S git python, and then git clone https://github.com/swaroopanand10/installscript.git
+
+# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+sudo pacman -S --noconfirm --needed base-devel rustup
+rustup default stable
+
+# git clone https://aur.archlinux.org/yay.git
+# # chown -R  cloudcone:users yay
+# cd yay 
+# makepkg -si
+# yay -S --noconfirm paru
+
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+
+
+echo "[user]
+	name = swaroopanand
+	email = swaroopanand@gmail.com
+[init]
+	defaultBranch = main
+[color]
+	ui = auto
+[core]
+	excludeFile = ~/.gitignore">.gitconfig
+
+# setting up git bare repo
+# git clone --bare git@github.com:swaroopanand10/.cfg.git $HOME/.cfg
+# function config {
+#    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
+# }
+# mkdir -p .config-backup
+# config checkout
+# if [ $? = 0 ]; then
+#   echo "Checked out config.";
+#   else
+#     echo "Backing up pre-existing dot files.";
+#     config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .config-backup/{}
+# fi;
+
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+git clone --bare https://github.com/swaroopanand10/.cfg.git $HOME/.cfg
+mkdir -p .config-backup && \
+config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
+xargs -I{} mv {} .config-backup/{}
+config checkout
+config config status.showUntrackedFiles no
+
+# git clone git@github.com:swaroopanand10/nvim.git
+git clone https://github.com/swaroopanand10/nvim.git $HOME/.config/
+
+./packages.sh
+

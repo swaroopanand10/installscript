@@ -27,7 +27,6 @@ chafa \
 fd \
 wlr-randr \
 wlprop  \
-alacritty-sixel-git \
 nwg-look-bin \
 xdg-desktop-portal-hyprland-git \
 xdg-desktop-portal \
@@ -60,7 +59,6 @@ cloudflare-warp-bin \
 network-manager-applet \
 tree \
 visual-studio-code-bin \
-gnome-keyring \
 zathura \
 gparted \
 mpv \
@@ -68,7 +66,6 @@ yt-dlp \
 ff2mpv-go-git \
 sxiv \
 polkit-gnome \
-rofi-greenclip \
 xournalpp \
 python3 \
 python-pip \
@@ -82,3 +79,6 @@ qutebrowser \
 swayidle \
 wlogout \
 zoxide \
+# alacritty-sixel-git \
+# rofi-greenclip \
+# gnome-keyring \
