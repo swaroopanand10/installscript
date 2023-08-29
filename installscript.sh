@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S --noconfirm  --needed base-devel rustup
+sudo pacman -S --noconfirm --needed base-devel rustup
 rustup default stable
 
 # git clone https://aur.archlinux.org/yay.git
@@ -26,7 +26,8 @@ echo "[user]
 	excludeFile = ~/.gitignore">.gitconfig
 
 # setting up git bare repo
-git clone --bare git@github.com:swaroopanand10/.cfg.git $HOME/.cfg
+# git clone --bare git@github.com:swaroopanand10/.cfg.git $HOME/.cfg
+git clone --bare https://github.com/swaroopanand10/.cfg.git $HOME/.cfg
 function config {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
