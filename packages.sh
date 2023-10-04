@@ -7,7 +7,7 @@ zsh-autosuggestions \
 fzf-tab-bin-git \
 hyprland \
 swaybg  \
-waybar-hyprland-git \
+waybar \
 pamixer  \
 playerctl  \
 brightnessctl \
@@ -18,7 +18,7 @@ lsix-git  \
 foot \
 kitty \
 grimblast-git  \
-cliphist  \
+cliphist \
 dunst \
 tesseract \
 tesseract-data-eng \
@@ -26,7 +26,7 @@ swaylock \
 chafa \
 fd \
 wlr-randr \
-wlprop  \
+wlprop \
 nwg-look-bin \
 xdg-desktop-portal-hyprland-git \
 xdg-desktop-portal \
@@ -60,6 +60,9 @@ network-manager-applet \
 tree \
 visual-studio-code-bin \
 zathura \
+zathura-pdf-mupdf \
+zaread-git \
+zathura-djvu \
 gparted \
 mpv \
 yt-dlp \
@@ -82,3 +85,4 @@ zoxide \
 # alacritty-sixel-git \
 # rofi-greenclip \
 # gnome-keyring \
+# zathura-pdf-poppler \
