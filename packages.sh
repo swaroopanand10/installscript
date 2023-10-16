@@ -82,6 +82,8 @@ qutebrowser \
 swayidle \
 wlogout \
 zoxide \
+ttf-font-awesome \
+# ttf-jetbrains-mono-nerd \
 # alacritty-sixel-git \
 # rofi-greenclip \
 # gnome-keyring \
